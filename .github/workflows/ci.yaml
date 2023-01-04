@@ -10,21 +10,21 @@ jobs:
   main:
     name: Tests
     runs-on: ubuntu-latest
-    container: ghcr.io/spaceship-prompt/spaceship-prompt:master
+    container: ghcr.io/spaceship-prompt/spaceship-prompt:latest
     steps:
       - name: ⬇️ Checkout Repo
         uses: actions/checkout@v2
 
-      - name: 🖨 Print Zsh Vesion
+      - name: 🖨 Print Zsh Version
         run: zsh --version
 
       - name: 🧪 Run Tests
-        run: ./tests/spaceship-section.test.zsh
+        run: ./tests/spaceship-vue.test.zsh
 
   release:
     name: Release
     needs: main
-    if: ${{ github.repository == 'spaceship-prompt/spaceship-section' && github.event_name == 'push' }}
+    if: ${{ github.repository == 'spaceship-prompt/spaceship-vue' && github.event_name == 'push' }}
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Repo
