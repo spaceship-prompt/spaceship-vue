@@ -1,5 +1,5 @@
 <h1 align="center">
-  😍 + 𝗩
+  𝗩 + 🚀
   <br>Spaceship Vue<br>
 </h1>
 
